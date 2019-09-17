@@ -1,5 +1,4 @@
-function showAll()
-{
+function showAll() {
 	var myForm = document.forms["formulario"];
 
 	document.getElementById("campos").innerHTML = "Alunos";
@@ -22,13 +21,11 @@ function showAll()
 	if (radios[0].checked) {
 		document.getElementById("show_sexo").innerHTML = "Sexo: Masculino";
 	}
-	else
-	{
+	else {
 		if (radios[1].checked) {
 			document.getElementById("show_sexo").innerHTML = "Sexo: Feminino";
 		}
-		else
-		{
+		else {
 			document.getElementById("show_sexo").innerHTML = "Sexo: Não definido";
 		}
 	}
