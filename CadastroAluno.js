@@ -1,54 +1,36 @@
-var studentArray = new Array();
+function showAll()
+{
+	var myForm = document.forms["formulario"];
 
-class Aluno {
+	document.getElementById("campos").innerHTML = "Alunos";
 
-  constructor(name, ra, sex, age, end, tel, email) {
-    this.name = name;
-    this.ra = ra;
-    this.sex = sex;
-    this.age = age;
-    this.end = end;
-    this.tel = tel;
-    this.email = email;
-  }
+	document.getElementById("show_nome").innerHTML = "Nome: " + myForm["firstName"].value;
 
-}
+	document.getElementById("show_ra").innerHTML = "RA: " + myForm["ra"].value;
 
-function clearFields(){
-  var field1 = document.getElementById("name");
-  var field2 = document.getElementById("ra");
-  var field3 = document.getElementById("sex");
-  var field4 = document.getElementById("age");
-  var field5 = document.getElementById("end");
-  var field6 = document.getElementById("tel");
-  var field7 = document.getElementById("email");
+	document.getElementById("show_idade").innerHTML = "Idade: " + myForm["age"].value;
 
-  field1.value = "";
-  field2.value = "";
-  field3.value = "";
-  field4.value = "";
-  field5.value = "";
-  field6.value = "";
-  field7.value = "";
-}
+	document.getElementById("show_tel").innerHTML = "Telefone: " + myForm["tel"].value;
+
+	document.getElementById("show_end").innerHTML = "Endereço: " + myForm["end"].value;
+
+	document.getElementById("show_email").innerHTML = "E-Mail: " + myForm["email"].value;
 
 
-function registerStudent(name, ra, sex, age, end, tel, email) {
-
-  var name = document.getElementById("name");
-  var ra = document.getElementById("ra");
-  var sex = document.getElementById("sex");
-  var age = document.getElementById("age");
-  var end = document.getElementById("end");
-  var tel = document.getElementById("tel");
-  var email = document.getElementById("email");
-
-  var student = new Aluno(name, ra, sex, age, end, tel, email);
-
-  studentArray.push(student);
-
-  clearFields();
-}
-
-function showStudents() {
+	// Verifica radioButtons:
+	var radios = myForm["sexo"];
+	if (radios[0].checked) {
+		document.getElementById("show_sexo").innerHTML = "Sexo: Masculino";
+	}
+	else
+	{
+		if (radios[1].checked) {
+			document.getElementById("show_sexo").innerHTML = "Sexo: Feminino";
+		}
+		else
+		{
+			document.getElementById("show_sexo").innerHTML = "Sexo: Não definido";
+		}
+	}
+	return false;
 }

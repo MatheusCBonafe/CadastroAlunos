@@ -1,52 +1,37 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title> Eventos em JavaScript </title>
+		<script type="text/javascript" src="cadastroAluno.js"></script>
+	</head>
 
-<html lang="pt-br">
-  <head>
-    <title>Cadastrar Aluno</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="CadastroAluno.css"/>
-  </head>
+	<body>
 
-  <body>
-    <script src="CadastroAluno.js"></script>
+	<h1>Cadastro de Alunos</h1>
 
-    <header>
-      <h1 id = "title">Cadastro de Alunos</h1>
-    </header>
+	<form name="formulario" action="" onsubmit="return showAll()">
+		<p>Nome: <input type="text" name="firstName" /> </p>
+		<p>RA:   <input type="text" name="ra" /> </p>
+		<p>Idade: <input type="text" name="age" /> </p>
+		<p>Sexo:</p>
+		<p><input type="radio" name="sexo" value="Masculino" /> Masculino </p>
+		<p><input type="radio" name="sexo" value="Feminino" /> Feminino </p>
+		<p>Telefone <input type="text" name="tel" /> </p>
+		<p>Endereço: <input type="text" name="end" /> </p>
+		<p>E-Mail: <input type="text" name="email" /> </p>
 
-    <table>
-      <tr>
-        <td><label for='name'>Nome:</label></td>
-        <td><input type="text" id = "name"/></td>
-      </tr>
-      <tr>
-        <td><label for='ra'>RA:</label></td>
-        <td><input type="text" id = "ra"/></td>
-      </tr>
-      <tr>
-        <td><label for='sex'>Sexo:</label></td>
-        <td><input type="text" id = "sex"/></td>
-      </tr>
-      <tr>
-        <td><label for='age'>Idade:</label></td>
-        <td><input type="text" id = "age"/></td>
-      </tr>
-      <tr>
-        <td><label for='end'>Endereço:</label></td>
-        <td><input type="text" id = "end"/></td>
-      </tr>
-      <tr>
-        <td><label for='tel'>Telefone:</label></td>
-        <td><input type="text" id = "tel"/></td>
-      </tr>
-      <tr>
-        <td><label for='email'>E-Mail:</label></td>
-        <td><input type="text" id = "email"/></td>
-      </tr>
 
-      <button id="registerButton" onclick="registerStudent()">Cadastrar</button>
+		<p><input type="submit" value="Enviar"/></p>
+	</form>
 
-      <button id="showButton" onclick="showStudents()">Mostrar Estudantes</button>
-
-    </body>
+	<h2 id="campos"></h2>
+	<p id="show_nome"></p>
+	<p id="show_ra"></p>
+	<p id="show_idade"></p>
+	<p id="show_sexo"></p>
+	<p id="show_end"></p>
+	<p id="show_tel"></p>
+	<p id="show_email"></p>
+	</body>
 </html>
