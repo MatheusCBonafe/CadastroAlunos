@@ -1,39 +1,35 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="pt-br">
 	<head>
 		<meta charset="UTF-8" />
 		<title> Cadastro de Alunos </title>
-		<script type="text/javascript" src="cadastroAluno.js"></script>
+		<script src="cadastroAluno.js"></script>
 	</head>
 
 	<body>
 
 	<h1>Cadastro de Alunos</h1>
 
-	<form name="formulario" action="" onsubmit="return showAll()">
-		<p>Nome: <input type="text" name="firstName" /> </p>
-		<p>RA:   <input type="text" name="ra" /> </p>
-		<p>Idade: <input type="text" name="age" /> </p>
+	<form name="formulario" onsubmit="return showAll()">
+		<p>Nome:     <input type="text" name="firstName" /> </p>
+		<p>RA:       <input type="text" name="ra" /> </p>
+		<p>Idade:    <input type="text" name="age" /> </p>
 		<p>Sexo:</p>
 		<p><input type="radio" name="sex" value="Masculino" /> Masculino </p>
 		<p><input type="radio" name="sex" value="Feminino" /> Feminino </p>
-		<p>Telefone <input type="text" name="tel" /> </p>
+		<p>Telefone: <input type="text" name="tel" /> </p>
 		<p>Endereço: <input type="text" name="end" /> </p>
-		<p>E-Mail: <input type="text" name="email" /> </p>
+		<p>E-Mail:   <input type="text" name="email" /> </p>
 
 
 		<p><input type="submit" value="Mostrar Alunos"/></p>
 	</form>
 
-	<button onclick="registerStudent()">Cadastrar</button>
+	<button id="registerButton" onclick="registerStudent()">Cadastrar</button>
 
-	<h2 id="campos"></h2>
-	<p id="show_nome"></p>
-	<p id="show_ra"></p>
-	<p id="show_idade"></p>
-	<p id="show_sexo"></p>
-	<p id="show_end"></p>
-	<p id="show_tel"></p>
-	<p id="show_email"></p>
+	<p id="alunos"></p>
+
+	<pre id="test"></pre>
+
 	</body>
 </html>
