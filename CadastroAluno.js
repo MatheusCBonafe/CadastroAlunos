@@ -1,4 +1,5 @@
 var arrayAlunos = [];
+var myForm = document.forms["formulario"];
 
 class Aluno {
 	constructor(nome, ra, sexo, idade, tel, end, email) {
@@ -14,39 +15,36 @@ class Aluno {
 }
 function registerStudent() {
 
-	var sexo;
+	var sex;
 
-	var radios = myForm["sexo"];
+	var nome = document.getElementById("firstName");
 
-	var nome = document.getElementById("firstName").innerHTML;
+	var ra = document.getElementById("ra");
 
-	var ra = document.getElementById("ra").innerHTML;
+	var idade = document.getElementById("age");
 
-	var idade = document.getElementById("age").innerHTML;
+	var tel = document.getElementById("tel");
 
-	var tel = document.getElementById("tel").innerHTML;
+	var end = document.getElementById("end");
 
-	var end = document.getElementById("end").innerHTML;
+	var email = document.getElementById("email");
 
-	var email = document.getElementById("email").innerHTML;
 
+	var radios = myForm["sex"];
 	if (radios[0].checked)
-		sexo = "Masculino"
+		sex = "Masculino"
 		else if (radios[1].checked)
-				sexo = "Feminino";
+				sex = "Feminino";
 		else
-			sexo = "Não definido";
+			sex = "Não definido";
 
-
-
-	var student = new Aluno (nome, ra, sexo, idade, tel, end, email)
+	var student = new Aluno (nome, ra, sex, idade, tel, end, email)
 	arrayAlunos.push(student);
 }
 
 
 
 function showAll() {
-
 	document.getElementById("campos").innerHTML = "Alunos";
 
 	for (var aux = 0; aux < arrayAlunos.length; aux++) {
@@ -65,6 +63,7 @@ function showAll() {
 		document.getElementById("show_email").innerHTML = "E-Mail: " + arrayAlunos[aux].email;
 
 	}
+return false;
 
 
 /*	var myForm = document.forms["formulario"];
